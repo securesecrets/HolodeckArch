@@ -1,8 +1,8 @@
 <template>
   <div class="content">
-    <h1>Step 1: Check if Pulsar has already been added</h1>
+    <h1>Step 1: Check if terra has already been added</h1>
     <p>
-      If you already have Pulsar or Testnet configured in Keplr you will
+      If you already have terra or Testnet configured in Keplr you will
       need to remove it first, or this tool will do nothing.
     </p>
 
@@ -13,36 +13,36 @@
       </li>
       <img alt="Vue logo" src="./assets/chainname.png" />
       <li>
-        Scroll to the bottom, and check Pulsar or Testnet are not listed
+        Scroll to the bottom, and check terra or Testnet are not listed
         under Beta Support
       </li>
       <img alt="Vue logo" src="./assets/betasupport.png" />
       <li>If they are, click the X next to the chain name to remove it</li>
     </ol>
     
-    <h1>Step 2: Add Pulsar to Keplr</h1>
+    <h1>Step 2: Add terra to Keplr</h1>
 
     <ol class="guide">
       <li>Open and unlock Keplr.</li>
 
       <li>
         Click the add button below. If nothing happens it means that you already
-        have a Pulsar chain installed. Either use it, or follow the
+        have a terra chain installed. Either use it, or follow the
         instructions in Step 1 to remove it.
       </li>
 
-      <button class="button" @click="addNetwork()">Add Pulsar</button>
+      <button class="button" @click="addNetwork()">Add terra</button>
 
       <li>Keplr will open an approval window. Read it, then click Approve</li>
 
       <img alt="Vue logo" src="./assets/keplrapprove.png" />
 
       <li>
-        If no error appears then Pulsar was successfully added to Keplr.
+        If no error appears then terra was successfully added to Keplr.
       </li>
     </ol>
 
-    <h1>Step 3: Switch from Mainnet to Pulsar in Keplr</h1>
+    <h1>Step 3: Switch from Mainnet to terra in Keplr</h1>
 
     <ol class="guide">
       <li>
@@ -51,11 +51,11 @@
       </li>
       <img alt="Vue logo" src="./assets/chainname.png" />
       <li>
-        Scroll to the bottom then click Secure Secrets Pulsar under Beta Support
+        Scroll to the bottom then click Secure Secrets terra under Beta Support
       </li>
       <img alt="Vue logo" src="./assets/securesecretsconnect.png" />
       <li>
-        Congrats! Keplr is now using the Secret Network Pulsar testnet
+        Congrats! Keplr is now using the terra or testnet
         chain via Secure Secrets
       </li>
     </ol>
@@ -69,43 +69,43 @@ export default {
   methods: {
     addNetwork() {
       window.keplr.experimentalSuggestChain({
-        chainId   : "pulsar-2",
-        chainName : "SecureSecrets Pulsar",
-        rpc       : "http://testnet.securesecrets.org:26657",
-        rest      : "http://testnet.securesecrets.org:1317",
+        chainId   : "phoenix-1",
+        chainName : "TerraV2",
+        rpc       : "https://rpc.terrav2.ccvalidators.com/",
+        rest      : "https://fcd.terrav2.ccvalidators.com/",
         bip44     : {
           coinType : 529,
         },
         coinType      : 529,
         stakeCurrency : {
-          coinDenom        : "SCRT",
-          coinMinimalDenom : "uscrt",
+          coinDenom        : "LUNA",
+          coinMinimalDenom : "uluna",
           coinDecimals     : 6,
         },
         bech32Config : {
-          bech32PrefixAccAddr  : "secret",
-          bech32PrefixAccPub   : "secretpub",
-          bech32PrefixValAddr  : "secretvaloper",
-          bech32PrefixValPub   : "secretvaloperpub",
-          bech32PrefixConsAddr : "secretvalcons",
-          bech32PrefixConsPub  : "secretvalconspub",
+          bech32PrefixAccAddr  : "terra",
+          bech32PrefixAccPub   : "terrapub",
+          bech32PrefixValAddr  : "terravaloper",
+          bech32PrefixValPub   : "terravaloperpub",
+          bech32PrefixConsAddr : "terravalcons",
+          bech32PrefixConsPub  : "terravalconspub",
         },
         currencies : [ {
-          coinDenom        : "SCRT",
-          coinMinimalDenom : "uscrt",
+          coinDenom        : "LUNA",
+          coinMinimalDenom : "uluna",
           coinDecimals     : 6,
         } ],
         feeCurrencies : [ {
-          coinDenom        : "SCRT",
-          coinMinimalDenom : "uscrt",
+          coinDenom        : "LUNA",
+          coinMinimalDenom : "uluna",
           coinDecimals     : 6,
         } ],
         gasPriceStep : {
-          low     : 0.1,
+          low     : 0.15,
           average : 0.25,
           high    : 0.4,
         },
-        features : [ "secretwasm" ],
+        features : [ ],
       });
     },
   },
