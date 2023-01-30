@@ -71,8 +71,8 @@ export default {
       window.keplr.experimentalSuggestChain({
         chainId   : "pulsar-2",
         chainName : "SecureSecrets Pulsar",
-        rpc       : "http://testnet.securesecrets.org:26657",
-        rest      : "http://testnet.securesecrets.org:1317",
+        rpc       : "https://pulsar.rpc.securesecrets.org",
+        rest      : "https://pulsar.api.securesecrets.org",
         bip44     : {
           coinType : 529,
         },
