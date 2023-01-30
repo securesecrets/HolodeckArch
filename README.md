@@ -1,6 +1,7 @@
 # Secure Secrets Testnet Config
 
 ## Project setup
+node version tested as working: v16.14.0
 ```
 npm install
 ```
