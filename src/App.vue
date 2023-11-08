@@ -69,10 +69,10 @@ export default {
   methods: {
     addNetwork() {
       window.keplr.experimentalSuggestChain({
-        chainId   : "pulsar-2",
+        chainId   : "pulsar-3",
         chainName : "SecureSecrets Pulsar",
-        rpc       : "http://testnet.securesecrets.org:26657",
-        rest      : "http://testnet.securesecrets.org:1317",
+        rpc       : "https://api.pulsar3.scrttestnet.com",
+        rest      : "https://rpc.pulsar3.scrttestnet.com",
         bip44     : {
           coinType : 529,
         },
